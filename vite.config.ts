@@ -8,17 +8,17 @@ export default defineConfig({
   plugins: [react(), chromeExtension(), typescript()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, '../src'),
+      '@': resolve(__dirname, './src'),
     },
   },
   build: {
     rollupOptions: {
       input: {
-        popup: resolve(__dirname, '../src/pages/Popup.tsx'),
-        options: resolve(__dirname, '../src/pages/Options.tsx'),
-        welcome: resolve(__dirname, '../src/pages/Welcome.tsx'),
-        background: resolve(__dirname, '../src/background/index.ts'),
-        content: resolve(__dirname, '../src/content/index.ts'),
+        popup: resolve(__dirname, './src/pages/Popup.tsx'),
+        options: resolve(__dirname, './src/pages/Options.tsx'),
+        welcome: resolve(__dirname, './src/pages/Welcome.tsx'),
+        background: resolve(__dirname, './src/background/index.ts'),
+        content: resolve(__dirname, './src/content/index.ts'),
       },
       output: {
         dir: 'dist',
